@@ -1,0 +1,44 @@
+:root{
+	--core: #FCCA11;
+	--core-2: #373A90;
+	--core-3: #E51E27;
+	--orange: #FCCA11;
+	--white: #FFFFFF;
+	--black: #2c3e50;
+}
+
+body{
+	overflow-x: hidden;
+  	font-family: 'Gilroy-Regular';
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Gilroy-Bold';
+}
+a{
+	transition: .2s ease;
+}
+
+.bold{ 
+	font-weight: bold; 
+	font-family: 'Gilroy-Bold';
+}
+.lighter{ 
+	font-weight: lighter; 
+	font-family: 'Gilroy-Light';
+}
+.normal{ 
+	font-weight: lighter; 
+	font-family: 'Gilroy-Regular';
+}
+.bxs-1{
+	box-shadow: 0 0 30px rgba(black, .15);
+}
+%bxs-1{
+	@extend .bxs-1;
+}
+.opacity-0{
+	opacity: 0;
+}
+.opacity-1{
+	opacity: 1;
+}

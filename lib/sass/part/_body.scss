@@ -1,0 +1,157 @@
+%bold{
+	@extend .bold;
+}
+
+.fitur-container{
+	margin: 20px auto;
+	// position: absolute;
+	// bottom: 0;
+	// left: 0;
+	// width: 60%;
+	// background: white;
+
+	&:before{
+		// content: "";
+		position: absolute;
+		width: 100%;
+		height: 55px;
+		background: var(--core-2);
+		left: 0;
+		bottom: 0;
+	}
+	.fitur{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: auto;
+		flex-direction: row;
+		color: black;
+
+		& > div{
+			text-align: center;
+			position: relative;
+
+			&:hover{
+				img{
+					filter: grayscale(0);
+					transform: scale(1.05);
+				}
+			}
+
+			&:before{
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				height: 60%;
+				width: 1px;
+				margin: auto;
+				background: #ddd;
+			}
+			&:last-child{
+				&:before{
+					display: none;
+				}
+			}
+
+			a{
+				color: black;
+
+				&:hover{
+					text-decoration: none;
+					color: var(--core-2);
+				}
+			}
+
+			img{
+				/*padding: 20px 0;*/
+				/*width: 100px;*/
+				transition: .3s ease;
+				height: 60px;
+				filter: grayscale(1);
+				/*object-fit: contain;*/
+				/*border-radius: 90em;*/
+				/*border: thin solid #ddd;*/
+				/*padding: 15px;*/
+			}
+			.judul{
+				padding: 20px 20px 15px;
+				font-size: 16px;
+				position: relative;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+.body-home{
+	.jumbotron{
+		h1,h2,h3,h4,h5,h6{
+			letter-spacing: 4px;
+			line-height: 1.5;
+		}
+		p{
+			font-size: 18px;
+			line-height: 2;
+			letter-spacing: 2px;
+			font-weight: bold;
+		}
+	}
+	.fitur{
+		margin: 100px 0;
+
+		& > a{
+		    display: inline-flex;
+		    align-items: center;
+		    width: 100%;
+		    color: black;
+		    padding: 20px 0;
+		    margin-bottom: 0;
+		    border-bottom: 3px solid var(--core);
+		    position: relative;
+		    z-index: 1;
+
+	    	&:before{
+				height: 0;
+				transition: .3s ease;
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 100%;
+				left: 0;
+				bottom: 0;
+				opacity: 0;
+				background: #2d308a;
+				z-index: -1;
+				transition: .4s ease;
+	    	}
+
+		    &:hover{
+		    	text-decoration: none;
+			    padding: 20px 15px;
+			    color: white;
+			    // margin: 20px 0;
+
+			    img{
+			    	filter: invert(1);
+			    }
+		    	&:before{
+					opacity: 1;
+					width: 100%;
+		    	}
+		    }
+		    & > img{
+				height: 60px;
+				width: 60px;
+				object-fit: contain;
+		    }
+		    .judul{
+		    	font-weight: bold;
+				font-size: 30px;
+				margin-left: 30px;
+				letter-spacing: 3px;
+		    }
+		}
+	}
+}
